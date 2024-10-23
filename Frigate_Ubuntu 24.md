@@ -40,13 +40,14 @@ pyenv global 3.10
 </pre>
 
 <pre>
-sudo mkdir /lib/gasket-driver/
-cd /lib/gasket-driver
-sudo apt -y install debhelper devscripts dh-dkms
-git clone https://github.com/google/gasket-driver.git
-cd gasket-driver
-debuild -us -uc -tc -b
-sudo dpkg -i gasket-dkms_1.0-18_all.deb
+  sudo mkdir /lib/gasket-driver/
+  cd /lib/gasket-driver
+  sudo apt -y install debhelper devscripts dh-dkms
+  git clone https://github.com/google/gasket-driver.git
+  cd gasket-driver
+  debuild -us -uc -tc -b
+  cd ..
+  sudo dpkg -i gasket-dkms_*_all.deb
 </pre>
 Confirm issue was resolved:
 <pre>
