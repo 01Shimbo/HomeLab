@@ -40,14 +40,14 @@ pyenv global 3.10
 </pre>
 
 <pre>
-  sudo mkdir /lib/gasket-driver/
-  cd /lib/gasket-driver
-  sudo apt -y install debhelper devscripts dh-dkms
-  git clone https://github.com/google/gasket-driver.git
-  cd gasket-driver
-  debuild -us -uc -tc -b
-  cd ..
-  sudo dpkg -i gasket-dkms_*_all.deb
+    sudo mkdir /lib/gasket-driver/
+    cd /lib/gasket-driver
+    sudo apt -y install debhelper devscripts dh-dkms
+    git clone https://github.com/google/gasket-driver.git
+    cd gasket-driver
+    debuild -us -uc -tc -b
+    cd ..
+    sudo dpkg -i gasket-dkms_*_all.deb
 </pre>
 Confirm issue was resolved:
 <pre>
@@ -84,23 +84,17 @@ mkdir coral
 cd coral/
 wget https://github.com/hjonnala/snippets/raw/main/wheels/python3.10/pycoral-2.0.0-cp310-cp310-linux_x86_64.whl
 wget https://github.com/hjonnala/snippets/raw/main/wheels/python3.10/tflite_runtime-2.5.0.post1-cp310-cp310-linux_x86_64.whl
-
+pip install --upgrade numpy==1.26.4
+  
 <pre>
 sudo apt install python3-pip
 pip install tflite_runtime-2.5.0.post1-cp310-cp310-linux_x86_64.whl
 pip install pycoral-2.0.0-cp310-cp310-linux_x86_64.whl
 </pre>
 
+<pre>
 git clone https://github.com/google-coral/pycoral.git
 cd pycoral
 bash examples/install_requirements.sh classify_image.py
 python3 examples/classify_image.py --model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite --labels test_data/inat_bird_labels.txt --input test_data/parrot.jpg
-
-</pre>
-
-
-
-Ifnumpy is to0 new:
-<pre>
-pip install --upgrade numpy==1.26.4
 </pre>
