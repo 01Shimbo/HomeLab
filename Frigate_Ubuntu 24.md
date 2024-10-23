@@ -41,7 +41,7 @@ pyenv global 3.10
 
 <pre>
 sudo mkdir /lib/gasket-driver/
-ce /lib/gasket-driver
+cd /lib/gasket-driver
 sudo apt -y install debhelper
 git clone https://github.com/google/gasket-driver.git
 cd gasket-driver
