@@ -39,6 +39,9 @@ pyenv install 3.10
 pyenv global 3.10
 </pre>
 
+gasket builder github
+https://github.com/jnicolson/gasket-builder
+
 <pre>
     sudo mkdir /lib/gasket-driver/
     cd /lib/gasket-driver
