@@ -42,7 +42,7 @@ pyenv global 3.10
 <pre>
 sudo mkdir /lib/gasket-driver/
 cd /lib/gasket-driver
-sudo apt -y install debhelper
+sudo apt -y install debhelper devscripts
 git clone https://github.com/google/gasket-driver.git
 cd gasket-driver
 debuild -us -uc -tc -b
