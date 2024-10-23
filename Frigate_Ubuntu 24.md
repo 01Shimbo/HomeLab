@@ -88,6 +88,8 @@ cd coral/
 wget https://github.com/hjonnala/snippets/raw/main/wheels/python3.10/pycoral-2.0.0-cp310-cp310-linux_x86_64.whl
 wget https://github.com/hjonnala/snippets/raw/main/wheels/python3.10/tflite_runtime-2.5.0.post1-cp310-cp310-linux_x86_64.whl
 pip install --upgrade numpy==1.26.4
+</pre>
+
   
 <pre>
 sudo apt install python3-pip
@@ -104,6 +106,7 @@ python3 examples/classify_image.py --model test_data/mobilenet_v2_1.0_224_inat_b
 
 
 test docker image 
+<pre>
  cd ~ \
  && apt-get -y update \
  && apt-get -y install curl \
@@ -118,3 +121,5 @@ test docker image
   --model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite  \
   --labels test_data/inat_bird_labels.txt \
   --input test_data/parrot.jpg
+  </pre>
+
