@@ -69,6 +69,7 @@ Title: gasket-dkms 1.0-18: gasket kernel module failed to build
 
 Solution compile driver:
 <pre>
+sudo apt -y install debhelper
 git clone https://github.com/google/gasket-driver.git
 cd gasket-driver
 debuild -us -uc -tc -b
