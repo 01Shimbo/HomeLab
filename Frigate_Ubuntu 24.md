@@ -105,7 +105,7 @@ python3 examples/classify_image.py --model test_data/mobilenet_v2_1.0_224_inat_b
 </pre>
 
 
-test docker image 
+test if docker image can use TPU
 <pre>
  cd ~ \
  && apt-get -y update \
