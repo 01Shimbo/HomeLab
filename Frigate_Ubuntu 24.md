@@ -9,14 +9,14 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 sudo apt-get update
 </pre>
 
-attempt to install gasket THIS WILL MOST LIKLY NOT WORK
-this will not work because gasket has been depricated in >python3.10
+attempt to install gasket THIS WILL MOST LIKELY NOT WORK
+this will not work because gasket has been deprecated in >python3.10
 <pre>
 sudo apt-get install gasket-dkms libedgetpu1-std
 </pre>
 
 FIX:
-install secound python envorment DO NOT DOWNGRADE CURRENT PYTHON VERSION (aptitude will not work anymore)
+install second python environment DO NOT DOWNGRADE CURRENT PYTHON VERSION (aptitude will not work anymore)
 <https://idroot.us/install-pyenv-ubuntu-24-04/>
 <pre>
 sudo apt-get update && sudo apt upgrade -y
@@ -99,7 +99,7 @@ python3 examples/classify_image.py --model test_data/mobilenet_v2_1.0_224_inat_b
 
 
 
-if nummpy is to new:
+Ifnumpy is to0 new:
 <pre>
 pip install --upgrade numpy==1.26.4
 </pre>
