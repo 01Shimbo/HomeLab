@@ -31,9 +31,12 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 </pre>
+Save Exit nano
+To restart shell:
 <pre>
 exec "$SHELL"
 </pre>
+install the a lower version of python:
 <pre>
 pyenv install 3.10
 pyenv global 3.10
