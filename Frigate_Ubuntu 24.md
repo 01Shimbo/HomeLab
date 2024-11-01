@@ -86,7 +86,7 @@ if it does not work install the wheel
 
 <pre>
 cd ~
-mkdir coral
+mkdir -p coral
 cd coral/
 wget https://github.com/hjonnala/snippets/raw/main/wheels/python3.10/pycoral-2.0.0-cp310-cp310-linux_x86_64.whl
 wget https://github.com/hjonnala/snippets/raw/main/wheels/python3.10/tflite_runtime-2.5.0.post1-cp310-cp310-linux_x86_64.whl
@@ -113,7 +113,7 @@ test if docker image can use TPU
  cd ~ \
  && apt-get -y update \
  && apt-get -y install curl \
- && mkdir test_data \
+ && mkdir -p test_data \
  && cd test_data \
  && curl -LO https://coral.ai/static/docs/images/parrot.jpg \
  && curl -LO https://raw.githubusercontent.com/google-coral/test_data/master/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
