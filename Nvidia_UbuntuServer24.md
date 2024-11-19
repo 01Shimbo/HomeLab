@@ -17,10 +17,9 @@ Installing Docker Tool Kit
     sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list`
 
 `sudo sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container-toolkit.list`
-
-`sudo apt-get update
-sudo apt-get install -y nvidia-container-toolkit
-sudo nvidia-ctk runtime configure --runtime=docker`
+```sudo apt-get update```
+```sudo apt-get install -y nvidia-container-toolkit```
+```sudo nvidia-ctk runtime configure --runtime=docker```
 
 Check if docker deamon.json was edited
 
