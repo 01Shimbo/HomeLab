@@ -110,19 +110,32 @@ python3 examples/classify_image.py --model test_data/mobilenet_v2_1.0_224_inat_b
 
 test if docker image can use TPU
 ```
- cd ~ \
- && apt-get -y update \
- && apt-get -y install curl \
- && mkdir -p test_data \
- && cd test_data \
- && curl -LO https://coral.ai/static/docs/images/parrot.jpg \
- && curl -LO https://raw.githubusercontent.com/google-coral/test_data/master/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
- && curl -LO https://raw.githubusercontent.com/google-coral/test_data/master/inat_bird_labels.txt \
- && cd .. \
- && curl -LO https://raw.githubusercontent.com/google-coral/pycoral/master/examples/classify_image.py \
- && python3 classify_image.py \
-  --model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite  \
-  --labels test_data/inat_bird_labels.txt \
-  --input test_data/parrot.jpg
-  ```
+cd ~ \
+&& apt-get -y update \
+&& apt-get -y install curl \
+&& mkdir -p test_data \
+&& cd test_data \
+&& curl -LO https://coral.ai/static/docs/images/parrot.jpg \
+&& curl -LO https://raw.githubusercontent.com/google-coral/test_data/master/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
+&& curl -LO https://raw.githubusercontent.com/google-coral/test_data/master/inat_bird_labels.txt \
+&& cd .. \
+&& curl -LO https://raw.githubusercontent.com/google-coral/pycoral/master/examples/classify_image.py \
+&& python3 classify_image.py \
+--model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite  \
+--labels test_data/inat_bird_labels.txt \
+--input test_data/parrot.jpg
+```
+
+to fix apt update warrning
+```
+W: https://packages.cloud.google.com/apt/dists/coral-edgetpu-stable/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+```
+https://github.com/google-coral/edgetpu/issues/550#issuecomment-2414830047
+```
+curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/coral.gpg
+
+sudo chmod a+r /etc/apt/keyrings/coral.gpg
+
+echo "deb [signed-by=/etc/apt/keyrings/coral.gpg] https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list > /dev/null
+```
 
