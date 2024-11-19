@@ -46,19 +46,19 @@ gasket builder github
 https://github.com/jnicolson/gasket-builder
 
 ```
-    sudo mkdir -p ~/packages/coraltpu
-    cd ~/packages/coraltpu
-    sudo apt -y install debhelper devscripts dh-dkms
-    git clone https://github.com/google/gasket-driver.git
-    cd gasket-driver
-    debuild -us -uc -tc -b
-    cd ..
-    sudo dpkg -i gasket-dkms_*_all.deb
+sudo mkdir -p ~/packages/coraltpu
+cd ~/packages/coraltpu
+sudo apt -y install debhelper devscripts dh-dkms
+git clone https://github.com/google/gasket-driver.git
+cd gasket-driver
+debuild -us -uc -tc -b
+cd ..
+sudo dpkg -i gasket-dkms_*_all.deb
 ```
 Confirm issue was resolved:
 ```
-    sudo apt-get install gasket-dkms libedgetpu1-std
-    sudo apt-get update && sudo apt upgrade -y
+sudo apt-get install gasket-dkms libedgetpu1-std
+sudo apt-get update && sudo apt upgrade -y
 ```
 
 Create user and group
