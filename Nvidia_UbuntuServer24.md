@@ -3,6 +3,11 @@ https://ubuntu.com/server/docs/nvidia-drivers-installation
 I used Building your own kernel modules using the NVIDIA DKMS package method
 GPU is a P620 Quadro the driver branch is 535-server generic linux flavor
 
+Start by updating
+```
+sudo apt update && apt upgrade -y
+```
+
 `sudo apt install linux-headers-generic -y
 sudo apt install linux-headers-$(uname -r) -y
 sudo apt install nvidia-dkms-535-server -y
@@ -37,10 +42,3 @@ example out put:
 }`
 if no output god speed.
 `sudo systemctl restart docker`
-
-```
-function test() {
-  console.log("This code will have a copy button to the right of it");
-}
-```
-
