@@ -16,6 +16,14 @@ sudo apt install linux-headers-$(uname -r) -y
 sudo apt install nvidia-dkms-535-server -y
 sudo apt install nvidia-driver-535-server -y
 ```
+reboot computer
+```
+sudo reboot
+```
+Test driver
+```
+nvidia-smi
+```
 
 
 Installing Nvidia Docker Tool Kit
