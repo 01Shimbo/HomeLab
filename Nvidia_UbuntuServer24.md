@@ -5,7 +5,7 @@ GPU is a P620 Quadro the driver branch is 535-server generic linux flavor
 
 Start by updating
 ```
-sudo apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 ```
 Installing NVIDIA drivers on Ubuntu server 24
 https://ubuntu.com/server/docs/nvidia-drivers-installation
