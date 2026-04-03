@@ -1,9 +1,92 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="BpWidbB6Yq-v5uV8pFo8">
-    <mxGraphModel>
+    <mxGraphModel dx="1985" dy="651" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-9" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.container_3;" value="TrueNAS" vertex="1">
+          <mxGeometry height="60" width="60" x="355" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-23" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.hard_disk;" value="SMB Share" vertex="1">
+          <mxGeometry height="44" width="35" x="412.5" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-24" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.hard_disk;" value="NFS Share" vertex="1">
+          <mxGeometry height="44" width="35" x="320" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-30" parent="1" style="swimlane;" value="Proxmox" vertex="1">
+          <mxGeometry height="820" width="770" x="-70" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-26" parent="dq-zPHFK8GxKd5iuOZxu-30" style="swimlane;" value="NFS Share" vertex="1">
+          <mxGeometry height="420" width="340" x="35" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-17" parent="dq-zPHFK8GxKd5iuOZxu-26" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.container_3;" value="Docker-Service" vertex="1">
+          <mxGeometry height="60" width="60" x="45" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-3" parent="dq-zPHFK8GxKd5iuOZxu-26" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.container_3;" value="Docker-Monitor" vertex="1">
+          <mxGeometry height="60" width="60" x="245" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-46" parent="dq-zPHFK8GxKd5iuOZxu-26" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Has Camera and Default VLANs&lt;/div&gt;&lt;div&gt;Frigate NVR&lt;/div&gt;&lt;div&gt;Portainer&lt;/div&gt;&lt;div&gt;Heimdall Dashboard&amp;nbsp;&lt;/div&gt;&lt;div&gt;OpenSpeedTest&lt;/div&gt;" vertex="1">
+          <mxGeometry height="280" width="122.5" x="17.5" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-47" parent="dq-zPHFK8GxKd5iuOZxu-26" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Uses Telegraf to pull SNMP Data from from Proxmox, iDrac, and Switch places data in to a Influx Database. Graphana will pull data from Influx and present it in dashboards.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="280" width="122.5" x="205" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-8" parent="dq-zPHFK8GxKd5iuOZxu-30" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.container_2;" value="&lt;div&gt;Nginx&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="60" x="355" y="30.000000000000057" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-27" parent="dq-zPHFK8GxKd5iuOZxu-30" style="swimlane;" value="SMB Share" vertex="1">
+          <mxGeometry height="420" width="290" x="410" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-6" parent="dq-zPHFK8GxKd5iuOZxu-27" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.container_3;" value="Home Assistant&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="60" x="22.5" y="37" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-4" parent="dq-zPHFK8GxKd5iuOZxu-27" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.container_3;" value="Nextcloud" vertex="1">
+          <mxGeometry height="60" width="60" x="115" y="37" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-25" parent="dq-zPHFK8GxKd5iuOZxu-27" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.container_3;" value="Proxmox Backup Server" vertex="1">
+          <mxGeometry height="60" width="60" x="210" y="37" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-31" parent="1" style="swimlane;" value="Hardware" vertex="1">
+          <mxGeometry height="820" width="200" x="-270" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-28" parent="dq-zPHFK8GxKd5iuOZxu-31" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/hard_disk.svg;" value="HDDs" vertex="1">
+          <mxGeometry height="27" width="50" x="75" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-32" parent="dq-zPHFK8GxKd5iuOZxu-31" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.ssd;" value="&lt;div&gt;Proxmox is&amp;nbsp;&lt;/div&gt;&lt;div&gt;installed on&amp;nbsp;&lt;/div&gt;&lt;div&gt;an SSD&lt;/div&gt;" vertex="1">
+          <mxGeometry height="35.5" width="50" x="75" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-51" edge="1" parent="dq-zPHFK8GxKd5iuOZxu-31" source="dq-zPHFK8GxKd5iuOZxu-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="180" />
+            </Array>
+            <mxPoint x="270" y="180.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-40" parent="dq-zPHFK8GxKd5iuOZxu-31" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.cpu;" value="GPU" vertex="1">
+          <mxGeometry height="50" width="50" x="75" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-39" parent="dq-zPHFK8GxKd5iuOZxu-31" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.cpu;" value="&lt;div&gt;Google Coral&lt;/div&gt;&lt;div&gt;TPU&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="75" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-42" edge="1" parent="dq-zPHFK8GxKd5iuOZxu-31" style="endArrow=classic;html=1;rounded=0;" value="Hard drives are passed though to TrueNAS and presented back to Proxmox as SMB">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="560" />
+            </Array>
+            <mxPoint x="130" y="560" as="sourcePoint" />
+            <mxPoint x="650" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dq-zPHFK8GxKd5iuOZxu-49" edge="1" parent="dq-zPHFK8GxKd5iuOZxu-31" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="200" />
+            </Array>
+            <mxPoint x="125" y="400" as="sourcePoint" />
+            <mxPoint x="270" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
